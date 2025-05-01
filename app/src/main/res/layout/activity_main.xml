@@ -13,6 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="40dp"
         android:layout_marginStart="12dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:text="Popular Albums"
         android:layout_width="wrap_content"
@@ -31,12 +32,23 @@
         android:layout_marginTop="8dp"
         android:clipChildren="false"
         android:clipToPadding="false" />
+    
+    <ProgressBar
+        android:id="@+id/chartProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/nested_recycler_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nested_recycler_view"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerOuter"
+        android:id="@+id/nested_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

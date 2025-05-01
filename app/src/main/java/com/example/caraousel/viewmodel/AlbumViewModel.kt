@@ -21,7 +21,7 @@ class AlbumViewModel(private val repository: AlbumRepository):ViewModel() {
         fetchAlbumData()
     }
 
-    private fun fetchAlbumData() {
+    private fun fetchAlbumData(){
         viewModelScope.launch {
             try {
                 _albums.value = repository.fetchAlbums()

@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="4dp">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivCharacter"
+        android:id="@+id/imageViewChartItem"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
+        android:background="?attr/colorSurfaceVariant"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Small"
-        tools:src="@tools:sample/avatars"
-        android:background="?attr/colorSurfaceVariant"/>
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/tvCharacterName"
+        android:id="@+id/textViewChartItemName"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:gravity="center"
-        android:textSize="12sp"
-        android:textStyle="bold"
         android:maxLines="2"
         android:ellipsize="end"
-        android:layout_marginTop="4dp"
-        tools:text="Shubhansh Mishra" />
-
-
+        android:textSize="12sp"
+        tools:text="Item Name" />
 </LinearLayout>
